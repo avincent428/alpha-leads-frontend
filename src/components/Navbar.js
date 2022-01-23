@@ -9,7 +9,7 @@ function Navbar(props) {
       <p className="nav-text">Rental</p>
       <p className="nav-text">Blogs</p>
 
-      <Link to="/contact">
+      <Link to="/contact" className="no-link-decoration">
         <p className="nav-text">Contact Us</p>
       </Link>
     </div>

@@ -1,7 +1,18 @@
 import React, { useState } from "react";
 
 function Contact() {
-  const initialState = { username: "", password: "" };
+  const initialState = {
+    firstName: "",
+    lastName: "",
+    phoneNumber: "",
+    email: "",
+    weddingDate: "",
+    venueName: "",
+    venueAddress: "",
+    guestCount: "",
+    colorTheme: "",
+    addNotes: "",
+  };
   const [formState, setFormState] = useState(initialState);
 
   const handleChange = (event) => {
@@ -15,24 +26,93 @@ function Contact() {
     // clear the form
     setFormState(initialState);
   };
+
   // Note that we need to use `htmlFor` instead of `for` in JSX
   return (
     <form onSubmit={handleSubmit}>
-      <label htmlFor="username">Username:</label>
+      <label htmlFor="firstName">First Name:</label>
       <input
-        id="username"
+        id="firstName"
         type="text"
         onChange={handleChange}
-        value={formState.username}
+        value={formState.firstName}
       />
-      <label htmlFor="password">Password:</label>
+      <br />
+      <label htmlFor="phoneNumber">Phone Number:</label>
       <input
-        id="password"
-        type="password"
+        id="phoneNumber"
+        type="text"
         onChange={handleChange}
-        value={formState.password}
+        value={formState.phoneNumber}
       />
-      <button type="submit">Login</button>
+      <br />
+      <label htmlFor="email">Email:</label>
+      <input
+        id="email"
+        type="text"
+        onChange={handleChange}
+        value={formState.email}
+      />
+      <br />
+      <label htmlFor="lastName">Last Name:</label>
+      <input
+        id="lastName"
+        type="text"
+        onChange={handleChange}
+        value={formState.lastName}
+      />
+      <br />
+
+      <label htmlFor="weddingDate">Wedding Date:</label>
+      <input
+        id="weddingDate"
+        type="text"
+        onChange={handleChange}
+        value={formState.weddingDate}
+      />
+      <br />
+      <label htmlFor="venueName">Venue Name:</label>
+      <input
+        id="venueName"
+        type="text"
+        onChange={handleChange}
+        value={formState.venueName}
+      />
+      <br />
+
+      <label htmlFor="venueAddress">Venue Address:</label>
+      <input
+        id="venueAddress"
+        type="text"
+        onChange={handleChange}
+        value={formState.venueAddress}
+      />
+      <br />
+      <label htmlFor="guestCount">Guest Count:</label>
+      <input
+        id="guestCount"
+        type="text"
+        onChange={handleChange}
+        value={formState.guestCount}
+      />
+      <br />
+      <label htmlFor="colorTheme">Color Theme:</label>
+      <input
+        id="colorTheme"
+        type="text"
+        onChange={handleChange}
+        value={formState.colorTheme}
+      />
+      <br />
+      <label htmlFor="addNotes">Additional Notes:</label>
+      <input
+        id="addNotes"
+        type="text"
+        onChange={handleChange}
+        value={formState.addNotes}
+      />
+      <br />
+      <button type="submit">Submit</button>
     </form>
   );
 }

@@ -2,11 +2,10 @@ import React from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 
-function ClientComplete({ lead }) {
-  function eventComplete() {
-    lead.client = false;
-    lead.archived = true;
-    axios.put(`http://localhost:8000/${lead._id}`, lead);
+function ArchiveInfo({ lead }) {
+  function deleteArchive() {
+    axios.delete(`http://localhost:8000/${lead._id}`, lead);
+    window.location.reload(false);
   }
   return (
     <div>
@@ -21,12 +20,10 @@ function ClientComplete({ lead }) {
       <p>Guest Count: {lead.guestCount} </p>
       <p>Color Themes: {lead.colorTheme}</p>
       <p>Additional Notes: {lead.addNotes}</p>
-      <p>Finished Event?</p>
-      <Link to="/admin">
-        <button onClick={eventComplete}>Archive</button>
-      </Link>
+      <p>Delete Event?</p>
+      <button onClick={deleteArchive}>Complete</button>
     </div>
   );
 }
 
-export default ClientComplete;
+export default ArchiveInfo;

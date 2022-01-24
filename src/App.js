@@ -11,6 +11,7 @@ import Upcoming from "./components/Upcoming";
 import Clients from "./components/Clients";
 import Archives from "./components/Archives";
 import ClientComplete from "./components/ClientComplete";
+import ArchiveInfo from "./components/ArchiveInfo";
 
 function App() {
   const [leads, setLeads] = useState([]);
@@ -101,6 +102,15 @@ function App() {
             exact
             path={`/admin/clients/${lead._id}`}
             render={() => <ClientComplete lead={lead} />}
+          />
+        );
+      })}
+      {leads.map((lead) => {
+        return (
+          <Route
+            exact
+            path={`/admin/archives/${lead._id}`}
+            render={() => <ArchiveInfo lead={lead} />}
           />
         );
       })}

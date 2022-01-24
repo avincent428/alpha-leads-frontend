@@ -8,6 +8,8 @@ import axios from "axios";
 import React, { useState, useEffect } from "react";
 import Admin from "./components/Admin";
 import Upcoming from "./components/Upcoming";
+import Clients from "./components/Clients";
+import Archives from "./components/Archives";
 
 function App() {
   const [leads, setLeads] = useState([]);
@@ -39,6 +41,16 @@ function App() {
         exact
         render={() => <LeadContainer leads={leads} />}
       />
+      {/* <Route
+        path="/admin/clients"
+        exact
+        render={() => <Clients leads={leads} />}
+      />
+      <Route
+        path="/admin/archives"
+        exact
+        render={() => <Archives leads={leads} />}
+      /> */}
       <Route path="/admin" exact render={() => <Upcoming lead={leads[0]} />} />
       <Route path="/admin" component={Admin} />
       {leads.map((lead) => {

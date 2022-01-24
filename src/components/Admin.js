@@ -11,7 +11,7 @@ function Admin(props) {
         <p>Potential Leads</p>
       </Link>
       <Link to="/admin/clients">
-        <p>Active Clients</p>
+        <p>Current Clients</p>
       </Link>
       <Link to="/admin/archives">
         <p>Archives</p>

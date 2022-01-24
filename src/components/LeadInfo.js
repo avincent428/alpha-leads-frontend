@@ -1,6 +1,18 @@
 import React from "react";
+import axios from "axios";
 
 function LeadInfo({ lead }) {
+  // function setClient() {
+  //   lead.client = true;
+  //   axios.put(`http://localhost:8000/${lead._id}`, lead);
+  //   console.log(lead.client);
+  // }
+
+  // function setArchives() {
+  //   lead.archived = true;
+  //   axios.put(`http://localhost:8000/${lead._id}, lead`);
+  // }
+
   return (
     <div>
       <h1>
@@ -15,8 +27,8 @@ function LeadInfo({ lead }) {
       <p>Color Themes: {lead.colorTheme}</p>
       <p>Additional Notes: {lead.addNotes}</p>
       <p>Became Client?</p>
-      <button>Yes</button>
-      <button>No</button>
+      <button /*onClick={setClient}*/>Yes</button>
+      <button /*onClick={setArchives}*/>No</button>
     </div>
   );
 }

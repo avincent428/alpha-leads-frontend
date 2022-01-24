@@ -1,13 +1,41 @@
 .title {
   margin-left: 25px;
-  border-bottom: 1px solid black;
 }
 
 .nav-bar {
   display: flex;
   justify-content: space-evenly;
+  background-color: rgb(240, 170, 193);
 }
 
 .nav-text {
   cursor: pointer;
+  color: white;
+  font-size: large;
+}
+
+.contact-us {
+  text-decoration: none;
+}
+
+.no-link-decoration {
+  text-decoration: none;
+}
+
+.lead-form {
+  margin-top: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 20em;
+}
+
+.form-text {
+  margin-right: 100px;
+}
+
+.form-field {
+  margin-bottom: 20px;
+  margin-top: 4px;
+  width: 300px;
+  height: 20px;
 }

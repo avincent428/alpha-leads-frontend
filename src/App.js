@@ -7,7 +7,6 @@ function App() {
   return (
     <div>
       <Header />
-      {/* <Route path="/" component={Header} /> */}
       <Navbar />
       <Route path="/contact" exact component={Contact} />
     </div>

@@ -10,6 +10,7 @@ import Admin from "./components/Admin";
 import Upcoming from "./components/Upcoming";
 import Clients from "./components/Clients";
 import Archives from "./components/Archives";
+import ClientComplete from "./components/ClientComplete";
 
 function App() {
   const [leads, setLeads] = useState([]);
@@ -23,9 +24,9 @@ function App() {
       const leadData = res.data;
 
       // breaks if you put anything other than a date in weddingDate element
-      leadData.sort(function (a, b) {
-        return new Date(a.weddingDate) - new Date(b.weddingDate);
-      });
+      // leadData.sort(function (a, b) {
+      //   return new Date(a.weddingDate) - new Date(b.weddingDate);
+      // });
 
       console.log(leadData);
       setLeads(leadData);
@@ -69,11 +70,7 @@ function App() {
           );
         }}
       />
-      <Route
-        path="/admin"
-        exact
-        render={() => <Upcoming lead={[leads[0]]} />}
-      />
+      <Route path="/admin" exact render={() => <Upcoming leads={leads} />} />
       <Route
         path="/admin/leads"
         exact
@@ -95,6 +92,15 @@ function App() {
             exact
             path={`/admin/${lead._id}`}
             render={() => <LeadInfo lead={lead} />}
+          />
+        );
+      })}
+      {leads.map((lead) => {
+        return (
+          <Route
+            exact
+            path={`/admin/clients/${lead._id}`}
+            render={() => <ClientComplete lead={lead} />}
           />
         );
       })}

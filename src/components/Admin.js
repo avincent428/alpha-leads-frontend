@@ -3,18 +3,18 @@ import { Link } from "react-router-dom";
 
 function Admin(props) {
   return (
-    <div>
-      <Link to="/admin">
-        <p>Home</p>
+    <div className="nav-bar">
+      <Link to="/admin" className="no-link-decoration">
+        <p className="nav-text">Home</p>
       </Link>
-      <Link to="/admin/leads">
-        <p>Potential Leads</p>
+      <Link to="/admin/leads" className="no-link-decoration">
+        <p className="nav-text">Potential Leads</p>
       </Link>
-      <Link to="/admin/clients">
-        <p>Current Clients</p>
+      <Link to="/admin/clients" className="no-link-decoration">
+        <p className="nav-text">Current Clients</p>
       </Link>
-      <Link to="/admin/archives">
-        <p>Archives</p>
+      <Link to="/admin/archives" className="no-link-decoration">
+        <p className="nav-text">Archives</p>
       </Link>
     </div>
   );

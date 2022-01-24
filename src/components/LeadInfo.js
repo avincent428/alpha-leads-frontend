@@ -1,17 +1,18 @@
 import React from "react";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 function LeadInfo({ lead }) {
-  // function setClient() {
-  //   lead.client = true;
-  //   axios.put(`http://localhost:8000/${lead._id}`, lead);
-  //   console.log(lead.client);
-  // }
+  function setClient() {
+    lead.client = true;
+    axios.put(`http://localhost:8000/${lead._id}`, lead);
+    console.log(lead.client);
+  }
 
-  // function setArchives() {
-  //   lead.archived = true;
-  //   axios.put(`http://localhost:8000/${lead._id}, lead`);
-  // }
+  function setArchives() {
+    lead.archived = true;
+    axios.put(`http://localhost:8000/${lead._id}`, lead);
+  }
 
   return (
     <div>
@@ -27,8 +28,12 @@ function LeadInfo({ lead }) {
       <p>Color Themes: {lead.colorTheme}</p>
       <p>Additional Notes: {lead.addNotes}</p>
       <p>Became Client?</p>
-      <button /*onClick={setClient}*/>Yes</button>
-      <button /*onClick={setArchives}*/>No</button>
+      <Link to="/admin/clients">
+        <button onClick={setClient}>Yes</button>
+      </Link>
+      <Link to="/admin/archives">
+        <button onClick={setArchives}>No</button>
+      </Link>
     </div>
   );
 }

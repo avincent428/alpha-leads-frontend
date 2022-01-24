@@ -33,15 +33,53 @@ function App() {
   }
   return (
     <div>
-      <Header />
-      <Navbar />
-      <Route path="/contact" exact component={Contact} />
+      <Route
+        exact
+        path="/"
+        render={() => {
+          return (
+            <div>
+              <Header />
+              <Navbar />
+            </div>
+          );
+        }}
+      />
+
+      <Route
+        path="/contact"
+        render={() => {
+          return (
+            <div>
+              <Header />
+              <Navbar />
+              <Contact />
+            </div>
+          );
+        }}
+      />
+      <Route
+        path="/admin"
+        render={() => {
+          return (
+            <div>
+              <Header />
+              <Admin />
+            </div>
+          );
+        }}
+      />
+      <Route
+        path="/admin"
+        exact
+        render={() => <Upcoming lead={[leads[0]]} />}
+      />
       <Route
         path="/admin/leads"
         exact
         render={() => <LeadContainer leads={leads} />}
       />
-      {/* <Route
+      <Route
         path="/admin/clients"
         exact
         render={() => <Clients leads={leads} />}
@@ -50,9 +88,7 @@ function App() {
         path="/admin/archives"
         exact
         render={() => <Archives leads={leads} />}
-      /> */}
-      <Route path="/admin" exact render={() => <Upcoming lead={leads[0]} />} />
-      <Route path="/admin" component={Admin} />
+      />
       {leads.map((lead) => {
         return (
           <Route

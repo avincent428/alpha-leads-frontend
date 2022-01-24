@@ -4,7 +4,7 @@ function Lead({ lead }) {
   return (
     <div className="lead">
       {lead.firstName} {lead.lastName}
-      <p>{lead.weddingDate}</p>
+      <p>Wedding Date: {lead.weddingDate}</p>
     </div>
   );
 }

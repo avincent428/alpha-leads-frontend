@@ -27,7 +27,6 @@ function Contact() {
     setFormState(initialState);
   };
 
-  // Note that we need to use `htmlFor` instead of `for` in JSX
   return (
     <div className="lead-form">
       <form onSubmit={handleSubmit}>
@@ -74,7 +73,7 @@ function Contact() {
         />
         <br />
         <label htmlFor="weddingDate">
-          When is your wedding date? (mm/dd/yy)
+          When is your wedding date? (mm/dd/yyyy)
         </label>
         <br />
         <input

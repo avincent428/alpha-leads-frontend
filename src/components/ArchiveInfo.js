@@ -20,8 +20,7 @@ function ArchiveInfo({ lead }) {
       <p>Guest Count: {lead.guestCount} </p>
       <p>Color Themes: {lead.colorTheme}</p>
       <p>Additional Notes: {lead.addNotes}</p>
-      <p>Delete Event?</p>
-      <button onClick={deleteArchive}>Complete</button>
+      <button onClick={deleteArchive}>Delete Archive</button>
     </div>
   );
 }

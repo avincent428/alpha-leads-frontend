@@ -73,7 +73,9 @@ function Contact() {
           className="form-field"
         />
         <br />
-        <label htmlFor="weddingDate">When is your wedding date?</label>
+        <label htmlFor="weddingDate">
+          When is your wedding date? (mm/dd/yy)
+        </label>
         <br />
         <input
           id="weddingDate"

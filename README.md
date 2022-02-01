@@ -1,6 +1,6 @@
 # Capstone Project - Lead Capture for Small Businesses
 
-[Click Here to view form](https://alpha-leads-frontend.herokuapp.com/contact)
+[Click Here to view form](https://alpha-leads-frontend.herokuapp.com/contact)<br>
 [Click Here to view admin side](https://alpha-leads-frontend.herokuapp.com/admin)
 
 ## Description

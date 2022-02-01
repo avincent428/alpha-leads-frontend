@@ -5,13 +5,13 @@ import { Link } from "react-router-dom";
 function LeadInfo({ lead }) {
   function setClient() {
     lead.client = true;
-    axios.put(`http://localhost:8000/${lead._id}`, lead);
+    axios.put(`https://alpha-leads-backend.herokuapp.com/${lead._id}`, lead);
     console.log(lead.client);
   }
 
   function setArchives() {
     lead.archived = true;
-    axios.put(`http://localhost:8000/${lead._id}`, lead);
+    axios.put(`https://alpha-leads-backend.herokuapp.com/${lead._id}`, lead);
   }
 
   return (

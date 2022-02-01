@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 function ArchiveInfo({ lead }) {
   function deleteArchive() {
-    axios.delete(`http://localhost:8000/${lead._id}`, lead);
+    axios.delete(`https://alpha-leads-backend.herokuapp.com/${lead._id}`, lead);
     window.location.reload(false);
   }
   return (

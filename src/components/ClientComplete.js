@@ -6,7 +6,7 @@ function ClientComplete({ lead }) {
   function eventComplete() {
     lead.client = false;
     lead.archived = true;
-    axios.put(`http://localhost:8000/${lead._id}`, lead);
+    axios.put(`https://alpha-leads-backend.herokuapp.com/${lead._id}`, lead);
   }
   return (
     <div>

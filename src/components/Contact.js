@@ -22,7 +22,7 @@ function Contact() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    axios.post("http://localhost:8000/", formState);
+    axios.post("https://alpha-leads-backend.herokuapp.com/", formState);
     console.log(formState);
     setFormState(initialState);
   };

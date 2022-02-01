@@ -21,7 +21,7 @@ function App() {
   }, []);
 
   function getData() {
-    axios.get("http://localhost:8000/").then((res) => {
+    axios.get("https://alpha-leads-backend.herokuapp.com/").then((res) => {
       const leadData = res.data;
 
       // breaks if you put anything other than a date in weddingDate element
